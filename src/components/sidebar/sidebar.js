@@ -24,6 +24,7 @@ const Sidebar = () => {
           <SidebarListItem
           iconName='folder'
           caption='Orders'
+          badgeCount='3'
           />
 
           <SidebarListItem
@@ -39,6 +40,7 @@ const Sidebar = () => {
           <SidebarListItem
           iconName='chat'
           caption='Conversations'
+          badgeCount='16'
           />
 
           <SidebarListItem

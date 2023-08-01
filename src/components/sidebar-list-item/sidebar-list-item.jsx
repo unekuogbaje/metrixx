@@ -28,7 +28,7 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount }) => {
           <IconComponent/>
           <p>{caption}</p>
           {badgeCount && badgeCount >= 0 ? (
-            <div className='rounded-full bg-badgeBG w-6 h-6'>{badgeCount}</div>
+            <div className='rounded-full bg-badgeBG w-8 h-8'><div className='text-xs mb-1 ml-1 px-2 py-2'>{badgeCount}</div></div>
             ) : null}
           
         </div>
