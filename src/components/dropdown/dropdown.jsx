@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ReactComponent as Chevrondown } from '../../assets/fi_chevron-down.svg';
 import { ChevronDown, ChevronUp } from "react-feather";
-import Select from "react-select";
 
 const DropDown = ({ options, handleSelect }) => {
   const [expand, setExpand] = useState(false);
@@ -11,6 +9,7 @@ const DropDown = ({ options, handleSelect }) => {
     const globalClickHandler = () => {
       setExpand((value) => (value ? false : value));
     };
+    
     document.addEventListener("click", globalClickHandler);
 
     return () => {
@@ -19,9 +18,9 @@ const DropDown = ({ options, handleSelect }) => {
   }, []);
 
   return (
-    <div className="dropdown flex cursor-pointer">
+    <div className="flex cursor-pointer ">
       <button
-        className="dropdown-label dropdown-item"
+        className=""
         onClick={(e) => {
           e.stopPropagation();
           setExpand((value) => !value);
@@ -29,11 +28,14 @@ const DropDown = ({ options, handleSelect }) => {
       >
         {SelectedProject ? SelectedProject : "Nanny's Shop"}
       </button>
-      <div className={`dropdown-options ${expand ? "expand" : ""}`}>
+      <button className="ml-3">
+        {expand ? <ChevronUp size={18}/> : <ChevronDown size={18}/>}
+      </button>
+      <div className={`gap-4 ${expand ? "expand" : ""}`}>
         {expand &&
           options.map((option) => (
             <button
-              className="dropdown-item"
+              className=""
               onClick={() => {
                 setExpand(false);
                 setSelectedProject(option);
@@ -44,8 +46,6 @@ const DropDown = ({ options, handleSelect }) => {
               {option}
             </button>
           ))}
-          <ChevronDown 
-          />
       </div>
 
       

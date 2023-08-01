@@ -2,7 +2,6 @@ import React from "react";
 import { Fragment } from "react";
 import { ReactComponent as Home } from '../../assets/Home.svg';
 import { ReactComponent as Bell } from '../../assets/Notification.svg';
-import { ReactComponent as ChevronDown } from '../../assets/fi_chevron-down.svg';
 import { ReactComponent as Profile } from '../../assets/profile 1.svg';
 import DropDown from "../dropdown/dropdown";
 
@@ -17,9 +16,8 @@ const Navbar = () => {
             <p className="py-4 pl-5 text-md font-medium leading-normal text-contactBG">Dashboard</p>
 
             <div className="flex absolute top-3.5 right-5 gap-5">
-              <div className="flex bg-badgeBG/50 py-1 px-3 rounded-lg gap-2.5 w-36 text-sm text-gray-800 font-light">
+              <div className="bg-badgeBG/50 py-1 px-3 rounded-lg gap-2.5 w-36 text-sm text-gray-800 font-light">
                 <DropDown options={options} handleSelect={handleSelect} />
-                
               </div>
               <Bell/>
               <Profile/>
