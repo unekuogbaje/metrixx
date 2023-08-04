@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react';
 import Navbar from '../navbar/navbar';
 import Sidebar from '../sidebar/sidebar';
-import MainFrame from '../main-frame/main-frame';
+import CardContainer from '../card-container/card-container';
+
 
 const PageLayout = ({ children }) => {
     return (
@@ -13,7 +14,7 @@ const PageLayout = ({ children }) => {
             pageTitle='Dashboard'>
           </Navbar>
           <div className=''>
-            <MainFrame/>
+            <CardContainer/>
           </div>
         </div>
         { children }

@@ -24,7 +24,7 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount }) => {
   const IconComponent = iconComponents[iconName]
 
     return (
-        <div className={`flex rounded-lg py-4 px-5 gap-4 ${isCurrentPage === "true" ? "bg-primary " : "bg-transparent"}`}>
+        <div className={`flex rounded-lg py-4 px-5 gap-4 ${isCurrentPage === "true" ? "bg-primaryBlue " : "bg-transparent"}`}>
           <IconComponent/>
           <p>{caption}</p>
           {badgeCount && badgeCount >= 0 ? (
