@@ -3,7 +3,7 @@ import { ReactComponent as Cardbag } from '../../assets/Cardbag.svg';
 import { ReactComponent as Carduser } from '../../assets/Carduser.svg';
 import { ReactComponent as Folder } from '../../assets/Folder.svg';
 import { ReactComponent as Graph } from '../../assets/Graph.svg';
-import { ReactComponent as Cart } from '../../assets/fi_shopping-cart.svg';
+import { ReactComponent as Cart } from '../../assets/cart.svg';
 import { ReactComponent as Phone } from '../../assets/Phone.svg';
 import { ReactComponent as Whitefolder } from '../../assets/Whitefolder.svg'
 import MainDropdown from "../main-dropdown/main-dropdown";
