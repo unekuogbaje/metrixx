@@ -7,12 +7,12 @@ import {
 
 const Sidebar = () => {
     return (
-      <div className='w-72 p-5 h-screen bg-white relative'>
+      <div className='w-72 px-8 h-screen bg-white relative'>
         <div className='h-12.5 w-28 mt-3.5'>
           <Logo/>
         </div>
 
-        <div className='mt-16 font-light text-sm text-zinc-700 gap-6'>
+        <div className='pt-16 font-light text-sm text-zinc-700 gap-6'>
           <div className='text-white'>
             <SidebarListItem 
             iconName='category'

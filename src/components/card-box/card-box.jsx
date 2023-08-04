@@ -1,27 +1,45 @@
 import React from "react";
-import { ReactComponent as Bag } from '../../assets/Bag.svg';
-import { ReactComponent as User } from '../../assets/2 User.svg';
-import { ReactComponent as Folder } from '../../assets/Folder.svg';
-import { ReactComponent as Graph } from '../../assets/Graph.svg';
-import { ReactComponent as Cart } from '../../assets/fi_shopping-cart.svg';
-import { ReactComponent as Phone } from '../../assets/Phone.svg';
+import CardListItem from "../card-list-item/card-list-item";
 
-const iconComponents = {
-    'bag': Bag,
-    'user': User,
-    'graph': Graph,
-    'cart': Cart,
-    'phone': Phone,
-    'folder': Folder,
-  }
+const CardBox = () => {
+  return (
+    <div className="flex pt-10 pb-5 px-5 space-x-5">
+      <div className="">
+        <CardListItem
+        iconName="graph"
+        firstCaption="Sales" 
+        secondCaption="Volume"
+        firstFigures="₦4,000,000.00"
+        secondFigures="450"
+        secondPercentCount="+20.00"        
+        ></CardListItem>
+      </div>
 
-const CardBox = ({ iconName, bodyCaption, bodyPercentCount, dropdown }) => {
-    const IconComponent = iconComponents[iconName];
-    return (
-        <div>
-        <IconComponent/>
-        </div>
-    )
+      <div className="">
+        <CardListItem
+        iconName="carduser"
+        firstCaption="Customers"
+        secondCaption="Active"
+        firstFigures="1,250"
+        secondFigures="1,180"
+        secondPercentCount="85"
+        firstPercentCount="+15.80"     
+        />
+      </div>
+
+      <div className="">
+      <CardListItem
+      iconName="cardbag"
+      firstCaption="Customers"
+      secondCaption="Active"
+      thirdCaption="Completed"
+      firstFigures="450"
+      secondFigures="5"
+      thirdFigures="445"    
+      />
+    </div>
+    </div>
+  )
 };
 
 export default CardBox;

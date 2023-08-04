@@ -1,16 +1,24 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Navbar from '../navbar/navbar';
 import Sidebar from '../sidebar/sidebar';
+import MainFrame from '../main-frame/main-frame';
 
 const PageLayout = ({ children }) => {
     return (
-        <div className='flex'>
-          <Sidebar/>
+      <Fragment>
+      <div className='flex'>
+        <Sidebar/>
+        <div className='flex-col'>
           <Navbar 
-          pageTitle='Dashboard'>
+            pageTitle='Dashboard'>
           </Navbar>
-          { children }
+          <div className=''>
+            <MainFrame/>
+          </div>
+        </div>
+        { children }
       </div>
+      </Fragment>
     )
 };
 
