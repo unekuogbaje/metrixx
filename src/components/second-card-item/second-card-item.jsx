@@ -30,22 +30,22 @@ const SecondCardItem = ({
 
           <div className="flex justify-between">
             <span className="flex gap-2">
-              <Circle className="bg-primaryBlue rounded-full text-primaryBlue" size={10}/>
+              <Circle className="bg-primaryBlue rounded-full text-primaryBlue" size={8}/>
               <h1 className= "text-zinc-400 text-xs">{action1}</h1>
             </span>
 
             <span className="flex gap-2">
-              <Circle className="bg-secondaryBlue rounded-full text-secondaryBlue" size={10}/>
+              <Circle className="bg-secondaryBlue rounded-full text-secondaryBlue" size={8}/>
               <h1 className= "text-zinc-400 text-xs">{action2}</h1>
             </span>
 
             <span className="flex gap-2">
-              <Circle className="bg-badgeBG rounded-full text-badgeBG" size={10}/>
+              <Circle className="bg-badgeBG rounded-full text-badgeBG" size={8}/>
               <h1 className= "text-zinc-400 text-xs">{action3}</h1>
             </span>
           </div>
           
-          <div className="px-12 py-8">
+          <div className="px-12 py-3">
             <IconComponent/>
           </div>
         </div>

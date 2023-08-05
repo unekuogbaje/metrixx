@@ -32,7 +32,7 @@ const CardContainer = () => {
         <FirstCardItem
         iconName="cardbag"
         firstCaption="Customers"
-        secondCaption="Active"
+        secondCaption="Pending"
         thirdCaption="Completed"
         firstFigures="450"
         secondFigures="5"
@@ -42,7 +42,7 @@ const CardContainer = () => {
         />
       </div>
 
-      <div className="flex py-1.5 px-5 space-x-5">
+      <div className="flex pb-1.5 px-5 space-x-5">
         <SecondCardItem
         topTitle="Martketing"
         chart="piechart"
@@ -75,6 +75,14 @@ const CardContainer = () => {
           withCalender="true"     
           />
         </div>
+
+        <SecondCardItem
+        topTitle="Martketing"
+        chart="piechart"
+        action1="Acquisition"
+        action2="Purchase"
+        action3="Retention"
+        />
       </div>
     </div>
   )
