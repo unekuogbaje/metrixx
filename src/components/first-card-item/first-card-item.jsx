@@ -31,7 +31,7 @@ const FirstCardItem = ({
     redCaption,
     blueBackground,
     backgroundBlue,
-    withCalender
+    withCalendar
     }) => {
     const IconComponent = iconComponents[iconName];
     
@@ -42,7 +42,7 @@ const FirstCardItem = ({
         : "bg-white"}`}>
         <div className="flex space-x-20 justify-between">
           <IconComponent/>
-          {withCalender === "true" ? (
+          {withCalendar === "true" ? (
             <MainDropdown 
             title="This Week"
             faded="true"

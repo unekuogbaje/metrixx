@@ -1,6 +1,7 @@
 import React from "react";
 import FirstCardItem from "../first-card-item/first-card-item";
 import SecondCardItem from "../second-card-item/second-card-item";
+import ThirdCradItem from "../third-card-item/third-card-item";
 
 const CardContainer = () => {
   return (
@@ -13,7 +14,7 @@ const CardContainer = () => {
         firstFigures="₦4,000,000.00"
         secondFigures="450"
         secondPercentCount="+20.00"
-        withCalender="true"
+        withCalendar="true"
         redCaption="gray"        
         />
 
@@ -25,7 +26,7 @@ const CardContainer = () => {
         secondFigures="1,180"
         secondPercentCount="85"
         firstPercentCount="+15.80"
-        withCalender="true"
+        withCalendar="true"
         redCaption="gray"     
         />
 
@@ -37,7 +38,7 @@ const CardContainer = () => {
         firstFigures="450"
         secondFigures="5"
         thirdFigures="445"
-        withCalender="true"
+        withCalendar="true"
         redCaption="gray"    
         />
       </div>
@@ -45,10 +46,13 @@ const CardContainer = () => {
       <div className="flex pb-1.5 px-5 space-x-5">
         <SecondCardItem
         topTitle="Martketing"
-        chart="piechart"
+        iconName="piechart"
         action1="Acquisition"
         action2="Purchase"
         action3="Retention"
+        withCalendar="true"
+        withChart="true"
+        withActions="true"
         />
 
         <div className=" space-y-3">
@@ -72,17 +76,11 @@ const CardContainer = () => {
           secondFigures="30"
           firstPercentCount="+0.00"
           redCaption="true"
-          withCalender="true"     
+          withCalendar="true"     
           />
         </div>
 
-        <SecondCardItem
-        topTitle="Martketing"
-        chart="piechart"
-        action1="Acquisition"
-        action2="Purchase"
-        action3="Retention"
-        />
+        <ThirdCradItem/>
       </div>
     </div>
   )

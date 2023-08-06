@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
       <Fragment>
         <div className="bg-white w-screen h-16">
-          <div className="flex border-b-2 border-mainBG space-x-96">
+          <div className="flex border-b border-mainBG space-x-96">
             <p className="py-4 pl-5 text-md font-medium leading-normal text-contactBG">Dashboard</p>
 
             <div className="flex absolute top-3.5 right-5 gap-5">
