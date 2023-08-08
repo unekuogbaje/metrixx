@@ -5,7 +5,7 @@ import ThirdCradItem from "../third-card-item/third-card-item";
 
 const CardContainer = () => {
   return (
-    <div>
+    <div className="flex-row">
       <div className="flex pt-10 pb-5 px-5 space-x-5">
         <FirstCardItem
         iconName="graph"
@@ -44,16 +44,31 @@ const CardContainer = () => {
       </div>
 
       <div className="flex pb-1.5 px-5 space-x-5">
-        <SecondCardItem
-        topTitle="Martketing"
-        iconName="piechart"
-        action1="Acquisition"
-        action2="Purchase"
-        action3="Retention"
-        withCalendar="true"
-        withChart="true"
-        withActions="true"
-        />
+        <div className="space-y-2">
+          <SecondCardItem
+          topTitle="Martketing"
+          iconName="piechart"
+          action1="Acquisition"
+          action2="Purchase"
+          action3="Retention"
+          withCalendar="true"
+          withChart="true"
+          withActions="true"
+          />
+
+          <FirstCardItem
+          iconName="cardbag"
+          firstCaption="Customers"
+          secondCaption="Pending"
+          thirdCaption="Completed"
+          firstFigures="450"
+          secondFigures="5"
+          thirdFigures="445"
+          withCalendar="true"
+          redCaption="gray"    
+          />
+        </div>
+
 
         <div className=" space-y-3">
           <FirstCardItem
