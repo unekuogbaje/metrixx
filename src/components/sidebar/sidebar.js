@@ -1,3 +1,5 @@
+import { Fragment } from 'react';
+import { Outlet, Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 import SidebarListItem from '../sidebar-list-item/sidebar-list-item';
 import { 
@@ -7,10 +9,11 @@ import {
 
 const Sidebar = () => {
     return (
+      <Fragment>
       <div className='w-72 px-8 h-screen bg-white relative'>
-        <div className='h-12.5 w-28 mt-3.5'>
+        <Link className='h-12.5 w-28 mt-3.5' to={'/'}>
           <Logo/>
-        </div>
+        </Link>
 
         <div className='pt-16 font-light text-sm text-zinc-700 gap-6'>
           <div className='text-white'>
@@ -80,6 +83,8 @@ const Sidebar = () => {
         </div>
 
       </div>
+      <Outlet/>
+      </Fragment>
     )
 }
 
