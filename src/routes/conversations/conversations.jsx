@@ -7,7 +7,7 @@ const Conversations = () => {
     return (
       <Fragment>
         <div className='flex'>
-          <Sidebar/>
+          
           <div>
             <Navbar 
               pageTitle='Conversations'>
