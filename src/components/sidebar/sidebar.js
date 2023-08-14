@@ -11,7 +11,7 @@ const Sidebar = () => {
     return (
       <Fragment>
       <div className='w-72 px-8 h-screen bg-white relative'>
-        <Link className='h-12.5 w-28 mt-3.5' to={'/'}>
+        <Link className='h-12.5 w-28 mt-3.5' to='/'>
           <Logo/>
         </Link>
 
