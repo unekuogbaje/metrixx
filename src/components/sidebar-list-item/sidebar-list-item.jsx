@@ -34,7 +34,7 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl }) 
           <IconComponent/>
           {uRl === "present" ? (
             <Link to={"/conversations"}>{caption}</Link>) 
-            : <p>{caption}</p>}
+            : <Link to={""}>{caption}</Link>}
           {badgeCount && badgeCount >= 0 ? (
             <div className='rounded-full bg-badgeBG w-8 h-8'>
               <div className='text-xs mb-1 ml-1 px-2 py-2'>{badgeCount}</div>
