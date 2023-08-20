@@ -1,3 +1,5 @@
+import React, { Fragment } from 'react';
+import { Outlet, Link } from 'react-router-dom';
 import { ReactComponent as Category } from '../../assets/Category.svg';
 import { ReactComponent as Bag } from '../../assets/Bag.svg';
 import { ReactComponent as User } from '../../assets/2 User.svg';
@@ -20,22 +22,27 @@ const iconComponents = {
   'logout': Logout
 }
 
-const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount }) => {
+const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl }) => {
   const IconComponent = iconComponents[iconName]
 
     return (
+      <Fragment>
         <div className={`flex rounded-lg py-4 px-5 gap-4 ${
           isCurrentPage === "true" 
           ? "bg-primaryBlue " 
           : "bg-transparent"}`}>
           <IconComponent/>
-          <p>{caption}</p>
+          {uRl === "present" ? (
+            <Link to={"/conversations"}>{caption}</Link>) 
+            : <p>{caption}</p>}
           {badgeCount && badgeCount >= 0 ? (
             <div className='rounded-full bg-badgeBG w-8 h-8'>
               <div className='text-xs mb-1 ml-1 px-2 py-2'>{badgeCount}</div>
             </div>
             ) : null}
         </div>
+        <Outlet/>
+      </Fragment>
     )
 };
 

@@ -21,6 +21,7 @@ const Sidebar = () => {
             iconName='category'
             caption='Dashboard'
             isCurrentPage='true'
+            uRl={"absent"}
           />
           </div>
 
@@ -44,6 +45,7 @@ const Sidebar = () => {
           iconName='chat'
           caption='Conversations'
           badgeCount='16'
+          uRl={"present"}
           />
 
           <SidebarListItem
