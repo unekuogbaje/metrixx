@@ -21,8 +21,8 @@ const ChatListItem = ({
     const IconComponent = iconComponents[iconName];
     return (
       <div className="flex-row">
-        <div className="flex">
-          <p>{topTitle}</p>
+        <div className="flex justify-between">
+          <p className="text-contactBG">{topTitle}</p>
           <p className="text-gray-400">{chatCount}</p>
         </div>
         <div className="flex relative py-6">

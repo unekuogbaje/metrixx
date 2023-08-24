@@ -14,7 +14,7 @@ const Conversations = () => {
             <Navbar 
               pageTitle='Conversations'>
             </Navbar>
-            <div className='flex'>
+            <div className='flex justify-between'>
               <p className='text-contactBG px-6 py-1 mt-10 left-0'>Conversations with customers</p>
               <Button className='bg-primaryBlue text-sm font-light text-white px-6 py-1 mt-10'>New Message</Button>
             </div>

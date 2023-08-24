@@ -6,6 +6,7 @@ const ChatListCard = () => {
         <div className="py-4 px-6 rounded-xl bg-white space-y-2">
           <ChatListItem
           topTitle="Contacts"
+          chatCount="34"
           iconName="blackphone"
           item="iPhone 13"
           quantity="₦730,000.00 x 1"
