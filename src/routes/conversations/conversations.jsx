@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../../components/navbar/navbar';
 import Sidebar from '../../components/sidebar/sidebar';
-import ThirdCradItem from '../../components/third-card-item/third-card-item';
+import ChatListCard from '../../components/chat-list-card/chat-list-card';
 import { Button } from 'antd';
 
 const Conversations = () => {
@@ -15,11 +15,11 @@ const Conversations = () => {
               pageTitle='Conversations'>
             </Navbar>
             <div className='flex'>
-              <p className='text-contactBG px-6 py-1 mt-10 left-0'>Conversations with custoers</p>
+              <p className='text-contactBG px-6 py-1 mt-10 left-0'>Conversations with customers</p>
               <Button className='bg-primaryBlue text-sm font-light text-white px-6 py-1 mt-10'>New Message</Button>
             </div>
             <div className='pt-10 w-fit'>
-              <ThirdCradItem/>
+              <ChatListCard/>
             </div>
           </div>
         </div>
