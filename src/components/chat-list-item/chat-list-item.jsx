@@ -34,7 +34,7 @@ const ChatListItem = ({
         </div>
         <div className="flex border-b border-mainBG">
         <div className="flex px-2 py-2 relative">
-          <Circle className={`absolute rounded-full text-white ${
+          <Circle className={`absolute rounded-full text-white right-2 ${
             onlineStatus === "active" 
             ? "bg-primaryBlue"
             : "bg-secondaryBlue "
@@ -44,7 +44,7 @@ const ChatListItem = ({
         
         <div className="flex-row px-3 py-1 space-y-2">
           <p className="font-medium text-zinc-600 text-sm">{name}</p>
-          <p className="font-medium text-zinc-400 text-xs">{message}</p>
+          <p className="font-light text-zinc-400 text-xs">{message}</p>
         </div>
 
         <div className="flex-row px-3 py-1 space-y-2">
