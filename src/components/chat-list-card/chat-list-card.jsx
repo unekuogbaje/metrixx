@@ -7,12 +7,13 @@ const ChatListCard = () => {
           <ChatListItem
           topTitle="Contacts"
           chatCount="34"
-          iconName="blackphone"
-          item="iPhone 13"
-          quantity="₦730,000.00 x 1"
-          date="12 Sep 2022"
-          status="Pending"
-          statusBg="red"
+          iconName="jane"
+          name="Jane Doe"
+          message="Hi, I want to make enquiries about yo..."
+          time="12:55 am"
+          status="New"
+          statusBg="lemon"
+          onlineStatus="active"
           />
         </div>
     )

@@ -7,6 +7,7 @@ module.exports = {
         mainBG: "##F1F3F9",
         badgeBG: "#FFCC91",
         statusRed: "#CC5F5F",
+        statusLemon: "#FEF5EA",
         statusGreen: "#519C66",
         primaryBlue: "#5570f1",
         secondaryBlue: "#97A5EB",
