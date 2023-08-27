@@ -22,7 +22,7 @@ const iconComponents = {
   'logout': Logout
 }
 
-const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl }) => {
+const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl, open }) => {
   const IconComponent = iconComponents[iconName]
 
     return (
@@ -31,13 +31,16 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl }) 
           isCurrentPage === "true" 
           ? "bg-primaryBlue " 
           : "bg-transparent"}`}>
-          <IconComponent/>
-          {uRl === "present" ? (
-            <Link className={``} to={"/conversations"}>{caption}</Link>) 
-            : <Link to={""}>{caption}</Link>}
+          <div className={`cursor-pointer ${!open ? "scale-75" : !open ? "" : "" }`}>
+            <IconComponent/>
+          </div>
+          {uRl === "conversations" ? (
+            <Link className={`transition-transform ${!open ? "scale-0" : "" } `} to={"/conversations"}>{caption}</Link>) 
+            : uRl === "dashboard" ? (
+              <Link  className={`transition-transform ${!open ? "scale-0" : "" } `} to={""}>{caption}</Link>) : <Link></Link> }
           {badgeCount && badgeCount >= 0 ? (
-            <div className='rounded-full bg-badgeBG w-8 h-8'>
-              <div className='text-xs mb-1 ml-1 px-2 py-2'>{badgeCount}</div>
+            <div className={`rounded-full bg-badgeBG w-6 h-6 ${!open ? "scale-0" : ""}`}>
+              <div className='text-xs p-1'>{badgeCount}</div>
             </div>
             ) : null}
         </div>
@@ -47,3 +50,13 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl }) 
 };
 
 export default SidebarListItem;
+
+
+// <Link
+// className={`transition-transform ${
+//   uRl === "present" && !open ? "scale-0" : ""
+// }`}
+// to={uRl === "present" ? "/conversations" : ""}
+// >
+// {caption}
+// </Link> 

@@ -15,7 +15,7 @@ const Sidebar = () => {
       <Fragment>
       <div className={`bg-white h-screen px-8 ${open 
         ? "w-72" 
-        : "w-20"} duration-300 relative`}>
+        : "w-28"} duration-300 relative`}>
         <Link className='h-12.5 w-28 mt-3.5' to='/'>
           <Logo/>
         </Link>
@@ -26,7 +26,8 @@ const Sidebar = () => {
             iconName='category'
             caption='Dashboard'
             isCurrentPage='true'
-            uRl={"absent"}
+            uRl={"dashboard"}
+            open={open}
           />
           </div>
 
@@ -34,28 +35,38 @@ const Sidebar = () => {
           iconName='folder'
           caption='Orders'
           badgeCount='3'
+          uRl={"dashboard"}
+          open={open}
           />
 
           <SidebarListItem
           iconName='user'
           caption='User'
+          uRl={"dashboard"}
+          open={open}
           />
 
           <SidebarListItem
           iconName='folder'
           caption='Inventory'
+          uRl={"dashboard"}
+          open={open}
           />
 
           <SidebarListItem
           iconName='chat'
           caption='Conversations'
           badgeCount='16'
-          uRl={"present"}
+          uRl={"conversations"}
+          open={open}
+
           />
 
           <SidebarListItem
           iconName='settings'
           caption='Settings'
+          uRl={"dashboard"}
+          open={open}
 
           />
           
@@ -65,21 +76,25 @@ const Sidebar = () => {
           
         </div>
 
-        <div className='absolute bottom-0 font-light text-sm text-zinc-700'>
-          <div className='bg-contactBG/50 py-0 pl-4 mb-2 rounded-lg '>
+        <div className={`absolute bottom-0 font-light text-sm text-zinc-700`}>
+          <div className={`bg-contactBG/50 py-0 pl-4 mb-2 rounded-lg ${!open ? "bg-transparent pl-0" : "" }`}>
             <SidebarListItem
             iconName='headphones'
             caption='Contact Support'
+            uRl={"dashboard"}
+            open={open}
             />
           </div>
 
-          <div className='bg-badgeBG/50 rounded-lg'>
+          <div className={`bg-badgeBG/50 rounded-lg ${!open ? "bg-transparent" : "" }`}>
             <SidebarListItem
             iconName='gift'
             caption='Free Gift Awaits You!'
+            uRl={"dashboard"}
+            open={open}
             />
           
-            <div className='flex ml-6 text-xs gap-3.5'>
+            <div className={`flex ml-6 text-xs gap-3.5 ${!open ? "scale-0" : "" }`}>
               <p>Upgrade your account</p>
               <ChevronRight size={18}/>
             </div>
@@ -89,6 +104,8 @@ const Sidebar = () => {
             <SidebarListItem
             iconName='logout'
             caption='Logout'
+            uRl={"dashboard"}
+            open={open}
             />
           </div>
         </div>
