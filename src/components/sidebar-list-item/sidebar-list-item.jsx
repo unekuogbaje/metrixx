@@ -35,9 +35,10 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl, op
             <IconComponent/>
           </div>
           {uRl === "conversations" ? (
-            <Link className={`transition-transform ${!open ? "scale-0" : "" } `} to={"/conversations"}>{caption}</Link>) 
+            <Link className={`transition-transform duration-300 ${!open ? "scale-0" : "" } `} to={"/conversations"}>{caption}</Link>) 
             : uRl === "dashboard" ? (
-              <Link  className={`transition-transform ${!open ? "scale-0" : "" } `} to={""}>{caption}</Link>) : <Link></Link> }
+              <Link  className={`transition-transform duration-300 ${!open ? "scale-0" : "" } `} to={"/"}>{caption}</Link>) 
+            : <Link></Link> }
           {badgeCount && badgeCount >= 0 ? (
             <div className={`rounded-full bg-badgeBG w-6 h-6 ${!open ? "scale-0" : ""}`}>
               <div className='text-xs p-1'>{badgeCount}</div>
@@ -50,13 +51,3 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl, op
 };
 
 export default SidebarListItem;
-
-
-// <Link
-// className={`transition-transform ${
-//   uRl === "present" && !open ? "scale-0" : ""
-// }`}
-// to={uRl === "present" ? "/conversations" : ""}
-// >
-// {caption}
-// </Link> 
