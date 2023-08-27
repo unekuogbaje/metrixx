@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from '../../assets/Logo.svg';
 import SidebarListItem from '../sidebar-list-item/sidebar-list-item';
 import { 
   ArrowLeft,
+  ArrowRight,
   ChevronRight,
 } from 'react-feather';
 
@@ -58,7 +59,10 @@ const Sidebar = () => {
 
           />
           
-          <ArrowLeft className={`bottom-0 bg-primaryBlue text-white font-semibold rounded-full w-8 h-8 p-1 text-sm absolute top-[444px] -right-11 animate-bounce border-4 border-white cursor-pointer ${!open && "rotate-180"}`} onClick={() => setOpen(!open)}/>
+          {open ? <ArrowLeft className='bottom-0 bg-primaryBlue text-white font-semibold rounded-full w-8 h-8 p-1 text-sm absolute top-[444px] -right-11 animate-bounce border-4 border-white cursor-pointer' 
+          onClick={() => setOpen(!open)}/> : <ArrowRight className='bottom-0 bg-primaryBlue text-white font-semibold rounded-full w-8 h-8 p-1 text-sm absolute top-[444px] -right-11 animate-bounce border-4 border-white cursor-pointer'
+          onClick={() => setOpen(!open)}/>}
+          
         </div>
 
         <div className='absolute bottom-0 font-light text-sm text-zinc-700'>

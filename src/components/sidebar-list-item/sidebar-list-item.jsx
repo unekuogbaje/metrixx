@@ -33,7 +33,7 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl }) 
           : "bg-transparent"}`}>
           <IconComponent/>
           {uRl === "present" ? (
-            <Link to={"/conversations"}>{caption}</Link>) 
+            <Link className={``} to={"/conversations"}>{caption}</Link>) 
             : <Link to={""}>{caption}</Link>}
           {badgeCount && badgeCount >= 0 ? (
             <div className='rounded-full bg-badgeBG w-8 h-8'>
