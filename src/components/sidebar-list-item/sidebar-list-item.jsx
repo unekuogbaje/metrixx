@@ -31,9 +31,10 @@ const SidebarListItem = ({ iconName, caption, isCurrentPage, badgeCount, uRl, op
           isCurrentPage === "true" 
           ? "bg-primaryBlue " 
           : "bg-transparent"}`}>
-          <div className={`cursor-pointer ${!open ? "scale-75" : !open ? "" : "" }`}>
+          <Link className={`transition-transform ${uRl === "conversations" && !open ? "scale-75" : !open ? "" : "" }`} 
+          to={uRl === "conversations" ? "/conversations" : "/"}>
             <IconComponent/>
-          </div>
+          </Link>
           {uRl === "conversations" ? (
             <Link className={`transition-transform duration-300 ${!open ? "scale-0" : "" } `} to={"/conversations"}>{caption}</Link>) 
             : uRl === "dashboard" ? (
