@@ -54,33 +54,6 @@ const ThirdCradItem = () => {
           date="12 Sep 2022"
           status="Completed"
           />
-
-          <RecentOrderItems
-          iconName="blackphone"
-          item="iPhone 13"
-          quantity="₦730,000.00 x 1"
-          date="12 Sep 2022"
-          status="Pending"
-          statusBg="red"
-          />
-
-          <RecentOrderItems
-          iconName="blackphone"
-          item="iPhone 13"
-          quantity="₦730,000.00 x 1"
-          date="12 Sep 2022"
-          status="Pending"
-          statusBg="red"
-          />
-
-          <RecentOrderItems
-          iconName="blackphone"
-          item="iPhone 13"
-          quantity="₦730,000.00 x 1"
-          date="12 Sep 2022"
-          status="Pending"
-          statusBg="red"
-          />
         </div>
     )
 };

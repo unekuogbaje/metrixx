@@ -34,7 +34,7 @@ const Sidebar = () => {
           <SidebarListItem
           iconName='folder'
           caption='Orders'
-          badgeCount='3'
+          badgeCount='03'
           uRl={"dashboard"}
           open={open}
           />

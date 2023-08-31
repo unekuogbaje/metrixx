@@ -18,7 +18,7 @@ const Conversations = () => {
               <p className='text-contactBG px-6 py-1 mt-10 left-0'>Conversations with customers</p>
               <Button className='bg-primaryBlue text-sm font-light text-white px-6 py-1 mt-10'>New Message</Button>
             </div>
-            <div className='pt-10 w-fit'>
+            <div className='pt-4 w-fit'>
               <ChatListCard/>
             </div>
           </div>
