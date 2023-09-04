@@ -53,13 +53,13 @@ const ChatListItem = ({
 
         <div className="flex-row px-3 py-1 space-y-2">
           {topDisplay === "online-status"
-          ? (<button className={`rounded-lg font-light px-3 text-xs ${
+          ? (<button className={`rounded-lg font-light px-3 text-xs cursor-none ${
             statusBg === "lemon" 
             ? "bg-statusLemon" 
             : "bg-lime-100 text-lime-700"
           }`}>{status}</button>) 
           : topDisplay === "badge-count"
-          ? (<button className="rounded-full bg-badgeBG text-xs w-4 h-4 ml-8">{badgeCount}</button>)
+          ? (<button className="rounded-full bg-badgeBG text-xs w-4 h-4 ml-8 cursor-none">{badgeCount}</button>)
           : null}
           <p className="text-zinc-400 text-xs">{time}</p>
         </div>
